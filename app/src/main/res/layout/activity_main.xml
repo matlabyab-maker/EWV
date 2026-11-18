@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#101319">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:gravity="center_vertical" android:paddingHorizontal="12dp" android:background="#171D26">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="EWV  •  Video Editor" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="16sp"/>
+        <TextView android:id="@+id/projectStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="پروژه جدید" android:textColor="#FFC928" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- نوار ابزار افقی دائمی؛ این ردیف جزو ساختار ثابت صفحه اصلی است و نباید حذف شود. -->
+    <HorizontalScrollView android:id="@+id/topToolScroll" android:layout_width="match_parent"
+        android:layout_height="66dp" android:fillViewport="true" android:scrollbars="none"
+        android:background="#202936">
+        <LinearLayout android:id="@+id/topToolRow" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal"
+            android:paddingHorizontal="7dp">
+            <Button android:id="@+id/toolMedia" style="@style/ToolButton" android:text="＋&#10;رسانه"/>
+            <Button android:id="@+id/toolCut" style="@style/ToolButton" android:text="✂&#10;برش"/>
+            <Button android:id="@+id/toolTrim" style="@style/ToolButton" android:text="⌁&#10;کوتاه‌سازی"/>
+            <Button android:id="@+id/toolCrop" style="@style/ToolButton" android:text="▣&#10;قاب‌بندی"/>
+            <Button android:id="@+id/toolText" style="@style/ToolButton" android:text="T&#10;متن"/>
+            <Button android:id="@+id/toolAudio" style="@style/ToolButton" android:text="♫&#10;صدا"/>
+            <Button android:id="@+id/toolFilter" style="@style/ToolButton" android:text="◐&#10;فیلتر"/>
+            <Button android:id="@+id/toolSpeed" style="@style/ToolButton" android:text="»&#10;سرعت"/>
+            <Button android:id="@+id/toolOverlay" style="@style/ToolButton" android:text="▧&#10;لایه"/>
+            <Button android:id="@+id/toolExport" style="@style/ToolButton" android:text="⇧&#10;خروجی"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout android:id="@+id/playerFrame" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:layout_margin="10dp"
+        android:background="#05070A">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:gravity="center" android:orientation="vertical">
+            <TextView android:text="EWV" android:textColor="#FFC928" android:textSize="34sp" android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="پیش‌نمایش ویدیو" android:textColor="#AAB4C2" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+            <TextView android:id="@+id/playerHint" android:text="برای شروع، رسانه را اضافه کنید"
+                android:textColor="#657184" android:textSize="12sp" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/playerTime" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start" android:layout_margin="10dp" android:text="00:00 / 00:00"
+            android:textColor="#FFFFFF" android:textSize="12sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_margin="10dp" android:text="16:9"
+            android:textColor="#AAB4C2" android:textSize="12sp"/>
+    </FrameLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+        android:gravity="center" android:orientation="horizontal" android:background="#171D26">
+        <Button android:id="@+id/undoButton" style="@style/SmallControl" android:text="↶"/>
+        <Button android:id="@+id/playButton" style="@style/PlayControl" android:text="▶"/>
+        <Button android:id="@+id/redoButton" style="@style/SmallControl" android:text="↷"/>
+        <Button android:id="@+id/fitButton" style="@style/SmallControl" android:text="⛶"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+        android:gravity="center_vertical" android:paddingHorizontal="12dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="خط زمانی" android:textColor="#FFFFFF" android:textStyle="bold"/>
+        <TextView android:id="@+id/timelineDuration" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="00:00" android:textColor="#FFC928" android:textSize="12sp"/>
+    </LinearLayout>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="92dp"
+        android:scrollbars="horizontal" android:background="#171D26">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:orientation="vertical" android:padding="8dp">
+            <TextView android:text="VIDEO 1" android:textColor="#9EABBC" android:textSize="10sp"
+                android:layout_width="wrap_content" android:layout_height="16dp"/>
+            <LinearLayout android:id="@+id/videoTrack" android:layout_width="520dp" android:layout_height="28dp"
+                android:background="#26384B" android:gravity="center_vertical" android:paddingHorizontal="8dp">
+                <TextView android:text="برای افزودن کلیپ، + رسانه را بزنید" android:textColor="#DCE5EF" android:textSize="11sp"/>
+            </LinearLayout>
+            <TextView android:text="AUDIO 1   •   TEXT / OVERLAY" android:textColor="#9EABBC" android:textSize="10sp"
+                android:layout_width="wrap_content" android:layout_height="20dp" android:gravity="center_vertical"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="52dp"
+        android:fillViewport="true" android:scrollbars="none" android:background="#202936">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:gravity="center_vertical" android:orientation="horizontal" android:paddingHorizontal="8dp">
+            <Button android:id="@+id/importButton" style="@style/BottomButton" android:text="افزودن رسانه"/>
+            <Button android:id="@+id/layersButton" style="@style/BottomButton" android:text="لایه‌ها"/>
+            <Button android:id="@+id/projectButton" style="@style/BottomButton" android:text="پروژه"/>
+            <Button android:id="@+id/settingsButton" style="@style/BottomButton" android:text="تنظیمات"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

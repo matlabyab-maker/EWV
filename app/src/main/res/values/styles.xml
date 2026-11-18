@@ -1,0 +1,42 @@
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#FFC928</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#101319</item>
+        <item name="android:navigationBarColor">#101319</item>
+        <item name="android:windowBackground">#101319</item>
+    </style>
+    <style name="ToolButton" parent="@android:style/Widget.Material.Button">
+        <item name="android:layout_width">66dp</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:layout_marginHorizontal">3dp</item>
+        <item name="android:backgroundTint">#303D4D</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+    <style name="SmallControl" parent="@android:style/Widget.Material.Button">
+        <item name="android:layout_width">54dp</item><item name="android:layout_height">42dp</item>
+        <item name="android:backgroundTint">#303D4D</item><item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item><item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item><item name="android:insetTop">0dp</item><item name="android:insetBottom">0dp</item>
+    </style>
+    <style name="PlayControl" parent="@android:style/Widget.Material.Button">
+        <item name="android:layout_width">64dp</item><item name="android:layout_height">42dp</item>
+        <item name="android:backgroundTint">#FFC928</item><item name="android:textColor">#15191F</item>
+        <item name="android:textSize">18sp</item><item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item><item name="android:insetTop">0dp</item><item name="android:insetBottom">0dp</item>
+    </style>
+    <style name="BottomButton" parent="@android:style/Widget.Material.Button">
+        <item name="android:layout_width">wrap_content</item><item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginHorizontal">4dp</item><item name="android:backgroundTint">#303D4D</item>
+        <item name="android:textColor">#FFFFFF</item><item name="android:textSize">11sp</item>
+        <item name="android:minWidth">0dp</item><item name="android:minHeight">0dp</item>
+        <item name="android:insetTop">0dp</item><item name="android:insetBottom">0dp</item>
+    </style>
+</resources>
